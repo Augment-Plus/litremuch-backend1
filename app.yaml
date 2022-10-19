@@ -1,2 +1,4 @@
 runtime: nodejs16
 service: litremuch1
+env_variables:
+  KEY: "AIzaSyBR66RtJpOSeTpCtWWa42t9oKinQ4X3zig"
