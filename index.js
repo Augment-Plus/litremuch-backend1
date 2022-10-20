@@ -4,6 +4,8 @@ const cors = require("cors");
 const app = express();
 const { getDistance } = require("./functions");
 
+app.use(morgan("dev"));
+app.use(cors());
 app.get("/", async (req, res) => {
   let data = await getDistance();
   res.send(data);
