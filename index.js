@@ -7,7 +7,9 @@ const { getDistance } = require("./functions");
 app.use(morgan("dev"));
 app.use(cors());
 app.get("/", async (req, res) => {
-  let data = await getDistance();
+  let origins = req.query.origin;
+  let destinations = req.query.destination;
+  let data = await getDistance(origins, destinations);
   res.send(data);
 });
 
